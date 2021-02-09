@@ -11,3 +11,8 @@ export const TextDisplayFirst=()=>{
     <DisplayText/>
      );
 }
+export const TextDisplayFirstColro=()=>{
+    return(
+   <DisplayText colors="red"/>
+    );
+}
