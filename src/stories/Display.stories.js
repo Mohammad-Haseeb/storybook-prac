@@ -1,24 +1,26 @@
 import React from 'react';
 import DisplayText from './../components/Display';
-
+import { withKnobs, number } from '@storybook/addon-knobs';
 export default{
     title:"Text",
-    component:DisplayText
+    component:DisplayText,
+    decorators: [withKnobs],    
+
 }
 
 export const TextDisplayFirst=()=>{
      return(
-    <DisplayText/>
+    <DisplayText value="50"/>
      );
 }
-export const TextDisplayFirstColro=()=>{
+export const TextDisplayFirstColor=()=>{
     return(
-   <DisplayText colors="red"/>
+   <DisplayText colors="red" value={number('value',10)}/>
     );
 }
 export const TextDisplayFirstSize=()=>{
     return(
-   <DisplayText colors="blue" size="small"/>
+   <DisplayText colors="blue" size="small" value="90"/>
 
    );
 }
